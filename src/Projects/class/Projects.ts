@@ -1,6 +1,14 @@
+export type typesMainColor =
+  | "cyan"
+  | "red"
+  | "green"
+  | "violet"
+  | "orange"
+  | "purple"
+  | "yellow";
 export interface ProjectTypes {
   name: string;
-  colorMain: string;
+  colorMain: typesMainColor;
   extendedDescription: string;
   description?: string;
   images?: string[];
@@ -13,7 +21,7 @@ class Project {
   name: string;
   extendedDescription: string;
   description?: string;
-  colorMain: string;
+  colorMain: typesMainColor;
   images?: string[];
   url?: string;
   urlGithub?: string;
