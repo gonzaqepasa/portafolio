@@ -28,8 +28,9 @@ function NavbarMain() {
       <Navbar
         maxWidth="full"
         isBlurred
-        className="bg-neutral-900/50 "
+        isMenuOpen={isMenuOpen}
         onMenuOpenChange={setIsMenuOpen}
+        className="bg-neutral-900/50 "
       >
         <SocialMediaNav justify="start" mobile={false} />
         <HamburguerNav isMenuOpen={isMenuOpen} />
