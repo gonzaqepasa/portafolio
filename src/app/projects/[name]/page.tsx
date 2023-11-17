@@ -1,4 +1,6 @@
 import allProjects from "@/Projects/allProjects";
+import ProjectDescription from "@/components/ProjectView/ProjectDescription";
+import ProjectTitle from "@/components/ProjectView/ProjectTitle";
 import { Button } from "@nextui-org/react";
 import Link from "next/link";
 
@@ -20,12 +22,15 @@ const PorjectsPage: React.FC<Props> = ({ params }) => {
       } `}
     >
       {project ? (
-        <div>{project.name}</div>
+        <>
+          <ProjectTitle name={project.name} />
+          <ProjectDescription description={project.extendedDescription} />
+        </>
       ) : (
         <div className="text-center">
           <h3> No existe un proyecto con este nombre :C</h3>
           <p>Puede que te hayas equivocado</p>
-          <Button className="m-3"  color="default" variant="shadow">
+          <Button className="m-3" color="default" variant="shadow">
             <Link href={"/"}>Volver al Home</Link>
           </Button>
         </div>
