@@ -31,9 +31,10 @@ function NavbarMain() {
         className="bg-neutral-900/50 "
         onMenuOpenChange={setIsMenuOpen}
       >
-        <SocialMediaNav />
+        <SocialMediaNav justify="start" mobile={false} />
         <HamburguerNav isMenuOpen={isMenuOpen} />
         <WindowNav />
+        <SocialMediaNav justify="end" mobile={true} />
         <MobileNav />
       </Navbar>
     </>

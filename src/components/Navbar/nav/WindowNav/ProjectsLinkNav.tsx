@@ -21,7 +21,7 @@ interface Props {
 const ProjectsLinkNav: React.FC<Props> = ({ p }) => {
   return (
     <Link
-      className={`flex flex-col hover:bg-neutral-900  w-full p-1 rounded transition-colors ${returnColor(
+      className={`flex flex-col sm:hover:bg-neutral-900  w-full p-1 rounded transition-colors ${returnColor(
         p.colorMain
       )} link-hover-effect  `}
       href={`/projects/${p.name}`}
