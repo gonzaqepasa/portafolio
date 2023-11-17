@@ -23,16 +23,16 @@ interface Props {
 const ProjectsLinkNav: React.FC<Props> = ({ p }) => {
   return (
     <Link
-      className={`flex flex-col text-lg sm:hover:bg-neutral-900 relative w-full p-1 rounded transition-colors ${returnColor(
+      className={`flex flex-col  text-lg sm:hover:bg-neutral-900 relative w-full p-1 rounded transition-colors ${returnColor(
         p.colorMain
       )} link-hover-effect  `}
       href={`/projects/${p.name}`}
     >
-      <p className="flex items-end  gap-2">
+      <p className="flex items-center whitespace-nowrap gap-2">
         {p.name}
         {p.production && (
-          <i className="flex   text-sm text-green-300">
-            <FcApproval className="text-lg" />
+          <i className="flex   text-xs text-green-300">
+            <FcApproval className="text-base" />
             En producción
           </i>
         )}
