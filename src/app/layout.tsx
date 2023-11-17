@@ -1,10 +1,14 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Roboto } from "next/font/google";
 import "./globals.css";
-// 1. import `NextUIProvider` component
-import { NextUIProvider } from "@nextui-org/react";
+import "@/styles/fade.css";
+import "@/styles/scrollbar.css";
+import NavbarMain from "@/components/Navbar/Navbar";
 
-const inter = Inter({ subsets: ["latin"] });
+const roboto = Roboto({
+  subsets: ["latin"],
+  weight: ["100", "300", "400", "500", "700"],
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,8 +22,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <NextUIProvider>{children}</NextUIProvider>
+      <body
+        className={`${roboto.className} scrollbar-custom min-h-screen bg-neutral-900 text-neutral-300`}
+      >
+        <NavbarMain />
+        {children}
       </body>
     </html>
   );
