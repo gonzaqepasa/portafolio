@@ -1,5 +1,7 @@
 import Project, { typesMainColor } from "@/Projects/class/Projects";
 import Link from "next/link";
+import { FcApproval } from "react-icons/fc";
+import { Tooltip } from "@nextui-org/react";
 
 const returnColor = (str: typesMainColor): string => {
   const colorVariants: Record<typesMainColor, string> = {
@@ -21,12 +23,20 @@ interface Props {
 const ProjectsLinkNav: React.FC<Props> = ({ p }) => {
   return (
     <Link
-      className={`flex flex-col sm:hover:bg-neutral-900  w-full p-1 rounded transition-colors ${returnColor(
+      className={`flex flex-col text-lg sm:hover:bg-neutral-900 relative w-full p-1 rounded transition-colors ${returnColor(
         p.colorMain
       )} link-hover-effect  `}
       href={`/projects/${p.name}`}
     >
-      {p.name}
+      <p className="flex items-end  gap-2">
+        {p.name}
+        {p.production && (
+          <i className="flex   text-sm text-green-300">
+            <FcApproval className="text-lg" />
+            En producción
+          </i>
+        )}
+      </p>
       {p.description && (
         <i className="text-xs  text-neutral-400">{p.description}</i>
       )}
