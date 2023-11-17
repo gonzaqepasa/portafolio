@@ -8,20 +8,6 @@ import WindowNav from "./nav/WindowNav/WindowNav";
 
 function NavbarMain() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [scrollTop, setScrollTop] = useState(false);
-  useEffect(() => {
-    const handleScroll = () => {
-      window.scrollY > 0 ? setScrollTop(true) : setScrollTop(false);
-    };
-
-    // Agregar el event listener al montar el componente
-    window.addEventListener("scroll", handleScroll);
-
-    // Limpiar el event listener al desmontar el componente
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
 
   return (
     <>
@@ -36,7 +22,7 @@ function NavbarMain() {
         <HamburguerNav isMenuOpen={isMenuOpen} />
         <WindowNav />
         <SocialMediaNav justify="end" mobile={true} />
-        <MobileNav />
+        <MobileNav setIsMenuOpen={setIsMenuOpen} />
       </Navbar>
     </>
   );
