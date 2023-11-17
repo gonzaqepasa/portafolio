@@ -1,10 +1,10 @@
 "use client";
 import { useState, useEffect } from "react";
 import { Navbar } from "@nextui-org/react";
-import SocialMediaNav from "./nav/SocialMediaNav";
-import HamburguerNav from "./nav/HamburguerNav";
-import MobileNav from "./nav/MobileNav";
-import ProjectsNav from "./nav/ProjectsNav/WindowNav";
+import SocialMediaNav from "./nav/SocialMediaNav/SocialMediaNav";
+import HamburguerNav from "./nav/HamburguerNav/HamburguerNav";
+import MobileNav from "./nav/MobileNav/MobileNav";
+import WindowNav from "./nav/WindowNav/WindowNav";
 
 function NavbarMain() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -28,7 +28,7 @@ function NavbarMain() {
       <Navbar isBlurred className="bg-neutral-900/50 " onMenuOpenChange={setIsMenuOpen}>
         <SocialMediaNav />
         <HamburguerNav isMenuOpen={isMenuOpen} />
-        <ProjectsNav />
+        <WindowNav />
         <MobileNav />
       </Navbar>
     </>
