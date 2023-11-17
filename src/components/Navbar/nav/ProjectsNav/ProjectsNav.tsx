@@ -1,21 +1,16 @@
 import allProjects from "@/Projects/allProjects";
 import {
   NavbarContent,
-  NavbarItem,
   Button,
   Dropdown,
   DropdownTrigger,
   DropdownMenu,
   DropdownItem,
 } from "@nextui-org/react";
-import Link from "next/link";
 import "@/styles/link-hover.css";
+import ProjectsLinkNav from "./ProjectsLinkNav";
 interface Props {}
 const ProjectsNav: React.FC<Props> = () => {
-  const colorVariants: any = {
-    cyan: "text-cyan-500 before:bg-cyan-500 ",
-    red: "text-red-600 before:bg-red-500 ",
-  };
   return (
     <>
       {/* Botons Login para modo ventana  */}
@@ -42,17 +37,7 @@ const ProjectsNav: React.FC<Props> = () => {
                 className="p-0"
                 key={`${p.name}${i}`}
               >
-                <Link
-                  className={`flex flex-col w-full p-1 rounded transition-colors ${
-                    colorVariants[p.colorMain]
-                  } link-hover-effect hover:bg-neutral-700  `}
-                  href={`/projects/${p.name}`}
-                >
-                  {p.name}
-                  {p.description && (
-                    <i className="text-xs text-neutral-400">{p.description}</i>
-                  )}
-                </Link>
+                <ProjectsLinkNav p={p} />
               </DropdownItem>
             ))}
           </DropdownMenu>

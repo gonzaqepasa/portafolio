@@ -4,7 +4,7 @@ import { Navbar } from "@nextui-org/react";
 import SocialMediaNav from "./nav/SocialMediaNav";
 import HamburguerNav from "./nav/HamburguerNav";
 import MobileNav from "./nav/MobileNav";
-import ProjectsNav from "./nav/ProjectsNav";
+import ProjectsNav from "./nav/ProjectsNav/ProjectsNav";
 
 function NavbarMain() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
