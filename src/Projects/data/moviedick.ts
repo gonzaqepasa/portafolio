@@ -8,6 +8,7 @@ const data: ProjectTypes = {
   colorMain: "cyan",
   url: "https://moviedick.vercel.app/browse",
   urlGithub: "https://www.github.com/gonzaqepasa/moviedick",
+  tech: ["react", "nextjs", "node"],
 };
 
 const moviedick = new Project(data);
