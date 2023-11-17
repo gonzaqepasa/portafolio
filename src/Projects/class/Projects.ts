@@ -1,3 +1,5 @@
+import { typesTech } from "@/Techs/class/Tech";
+
 export type typesMainColor =
   | "cyan"
   | "red"
@@ -14,7 +16,7 @@ export interface ProjectTypes {
   images?: string[];
   url?: string;
   urlGithub?: string;
-  tech?: string[];
+  tech?: typesTech["name"][];
   production?: boolean;
 }
 
@@ -26,7 +28,7 @@ class Project {
   images?: string[];
   url?: string;
   urlGithub?: string;
-  tech?: string[];
+  tech?: typesTech["name"][];
   production?: boolean;
 
   constructor({

@@ -10,7 +10,7 @@ import nodeSvg from "@/utils/images/tecnologies/nodejs.svg";
 import postgresSvg from "@/utils/images/tecnologies/postgresql.svg";
 import reactSvg from "@/utils/images/tecnologies/react.svg";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
-interface typesTech {
+export interface typesTech {
   name:
     | "css"
     | "express"
