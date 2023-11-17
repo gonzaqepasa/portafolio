@@ -4,7 +4,7 @@ const data: ProjectTypes = {
   name: "Share It",
   extendedDescription:
     "Esta va a ser la descripcion general de todo el proyecto si o si requerida",
-  description: "Esta va a ser la futura descripcion",
+  description: "Red social realizada en Henry para rendir final",
   colorMain: "yellow",
 };
 

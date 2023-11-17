@@ -4,7 +4,7 @@ const data: ProjectTypes = {
   name: "MovieDick",
   extendedDescription:
     "Esta va a ser la descripcion general de todo el proyecto si o si requerida",
-  description: "Esta va a ser la futura descripcion",
+  description: "App de peliculas y series con trailer incluido",
   colorMain: "cyan",
 };
 

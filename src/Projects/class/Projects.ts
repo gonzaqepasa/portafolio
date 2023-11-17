@@ -15,6 +15,7 @@ export interface ProjectTypes {
   url?: string;
   urlGithub?: string;
   tech?: string[];
+  production?: boolean;
 }
 
 class Project {
@@ -26,6 +27,7 @@ class Project {
   url?: string;
   urlGithub?: string;
   tech?: string[];
+  production?: boolean;
 
   constructor({
     name,
@@ -36,6 +38,7 @@ class Project {
     urlGithub,
     tech,
     extendedDescription,
+    production,
   }: ProjectTypes) {
     this.name = name;
     this.description = description;
@@ -45,9 +48,8 @@ class Project {
     this.url = url;
     this.urlGithub = urlGithub;
     this.tech = tech;
+    this.production = production;
   }
-
-  
 }
 
 export default Project;
