@@ -1,6 +1,6 @@
 function TitleWelcome() {
   return (
-    <div className={`flex gap-1 text-center md:max-w-5xl px-5  my-10  `}>
+    <div className={`flex gap-1 text-center md:max-w-4xl px-5  my-10  `}>
       <h1 className="text-neutral-200 font-medium text-4xl md:text-5xl">
         Hola,👋 soy{" "}
         <i className=" bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-transparent bg-clip-text">
