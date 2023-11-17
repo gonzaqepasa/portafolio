@@ -1,5 +1,7 @@
 import allProjects from "@/Projects/allProjects";
+import { ProjectTypes } from "@/Projects/class/Projects";
 import ProjectDescription from "@/components/ProjectView/ProjectDescription";
+import ProjectTech from "@/components/ProjectView/ProjectTech";
 import ProjectTitle from "@/components/ProjectView/ProjectTitle";
 import ProjectUrls from "@/components/ProjectView/ProjectUrls";
 import ProjectImages from "@/components/ProjectView/ProjectsImages";
@@ -28,6 +30,7 @@ const PorjectsPage: React.FC<Props> = ({ params }) => {
           <ProjectTitle name={project.name} />
           <ProjectDescription description={project.extendedDescription} />
           <ProjectUrls url={project.url} urlGithub={project.urlGithub} />
+          <ProjectTech tech={project.tech} />
           <ProjectImages />
         </>
       ) : (
