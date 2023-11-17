@@ -11,6 +11,8 @@ import {
 import "@/styles/link-hover.css";
 import ProjectsLinkNav from "./ProjectsLinkNav";
 import Link from "next/link";
+import { FaBriefcase, FaHome } from "react-icons/fa";
+
 interface Props {}
 const WindowNav: React.FC<Props> = () => {
   return (
@@ -19,15 +21,15 @@ const WindowNav: React.FC<Props> = () => {
         {/* Botons de Inicio en ventana */}
         <NavbarItem>
           <Button
-            className="p-0 w-full text-neutral-100 "
+            className="py-0 w-full text-neutral-100 "
             radius="md"
             variant="light"
           >
             <Link
-              className="flex items-center justify-center w-full  h-full"
+              className="flex items-center text-lg gap-2 justify-center w-full  h-full"
               href={"/"}
             >
-              Inicio
+              <FaHome /> Inicio
             </Link>
           </Button>
         </NavbarItem>
@@ -35,8 +37,12 @@ const WindowNav: React.FC<Props> = () => {
         {/* Botons de Proyectos en ventana */}
         <Dropdown className="p-0">
           <DropdownTrigger>
-            <Button className="text-neutral-100 " radius="md" variant="light">
-              Proyectos
+            <Button
+              className="flex items-center text-base text-neutral-100 "
+              radius="md"
+              variant="light"
+            >
+              <FaBriefcase /> Proyectos
             </Button>
           </DropdownTrigger>
 
