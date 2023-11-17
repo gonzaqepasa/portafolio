@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import '@/styles/fade.css'
+import "@/styles/fade.css";
+import "@/styles/scrollbar.css";
 import NavbarMain from "@/components/Navbar/Navbar";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -18,7 +19,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-neutral-900 text-neutral-300`}>
+      <body
+        className={`${inter.className} scrollbar-custom bg-neutral-900 text-neutral-300`}
+      >
         <NavbarMain />
         {children}
       </body>
