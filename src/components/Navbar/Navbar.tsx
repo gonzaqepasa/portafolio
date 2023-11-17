@@ -25,7 +25,12 @@ function NavbarMain() {
 
   return (
     <>
-      <Navbar isBlurred className="bg-neutral-900/50 " onMenuOpenChange={setIsMenuOpen}>
+      <Navbar
+        maxWidth="full"
+        isBlurred
+        className="bg-neutral-900/50 "
+        onMenuOpenChange={setIsMenuOpen}
+      >
         <SocialMediaNav />
         <HamburguerNav isMenuOpen={isMenuOpen} />
         <WindowNav />

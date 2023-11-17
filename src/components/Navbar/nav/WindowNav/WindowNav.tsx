@@ -15,11 +15,18 @@ interface Props {}
 const WindowNav: React.FC<Props> = () => {
   return (
     <>
-      <NavbarContent className="hidden sm:flex" justify="end">
+      <NavbarContent className="hidden sm:flex gap-1" justify="end">
         {/* Botons de Inicio en ventana */}
         <NavbarItem>
-          <Button className="p-0 w-full" color="default" radius="md" variant="faded">
-            <Link className="flex items-center justify-center w-full  h-full" href={"/"}>
+          <Button
+            className="p-0 w-full text-neutral-100 "
+            radius="md"
+            variant="light"
+          >
+            <Link
+              className="flex items-center justify-center w-full  h-full"
+              href={"/"}
+            >
               Inicio
             </Link>
           </Button>
@@ -28,7 +35,7 @@ const WindowNav: React.FC<Props> = () => {
         {/* Botons de Proyectos en ventana */}
         <Dropdown className="p-0">
           <DropdownTrigger>
-            <Button color="default" radius="md" variant="faded">
+            <Button className="text-neutral-100 " radius="md" variant="light">
               Proyectos
             </Button>
           </DropdownTrigger>
