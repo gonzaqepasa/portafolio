@@ -4,7 +4,7 @@ import { Navbar } from "@nextui-org/react";
 import SocialMediaNav from "./nav/SocialMediaNav";
 import HamburguerNav from "./nav/HamburguerNav";
 import MobileNav from "./nav/MobileNav";
-import ProjectsNav from "./nav/ProjectsNav/ProjectsNav";
+import ProjectsNav from "./nav/ProjectsNav/WindowNav";
 
 function NavbarMain() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -25,7 +25,7 @@ function NavbarMain() {
 
   return (
     <>
-      <Navbar className="" onMenuOpenChange={setIsMenuOpen}>
+      <Navbar isBlurred className="bg-neutral-900/50 " onMenuOpenChange={setIsMenuOpen}>
         <SocialMediaNav />
         <HamburguerNav isMenuOpen={isMenuOpen} />
         <ProjectsNav />

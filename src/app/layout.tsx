@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${roboto.className} scrollbar-custom bg-neutral-900 text-neutral-300`}
+        className={`${roboto.className} scrollbar-custom min-h-screen bg-neutral-900 text-neutral-300`}
       >
         <NavbarMain />
         {children}
