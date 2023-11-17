@@ -1,7 +1,6 @@
 import Project, { typesMainColor } from "@/Projects/class/Projects";
+import InProductiontext from "@/components/globals/InProductionText";
 import Link from "next/link";
-import { FcApproval } from "react-icons/fc";
-import { Tooltip } from "@nextui-org/react";
 
 const returnColor = (str: typesMainColor): string => {
   const colorVariants: Record<typesMainColor, string> = {
@@ -30,12 +29,7 @@ const ProjectsLinkNav: React.FC<Props> = ({ p }) => {
     >
       <p className="flex items-center whitespace-nowrap gap-2">
         {p.name}
-        {p.production && (
-          <i className="flex   text-xs text-green-300">
-            <FcApproval className="text-base" />
-            En producción
-          </i>
-        )}
+        {p.production && <InProductiontext />}
       </p>
       {p.description && (
         <i className="text-xs  text-neutral-400">{p.description}</i>
