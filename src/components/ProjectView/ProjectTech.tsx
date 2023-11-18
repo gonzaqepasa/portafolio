@@ -9,9 +9,9 @@ const ProjectTech: React.FC<Props> = ({ tech }) => {
   return (
     <>
       {tech && (
-        <div className="flex flex-wrap items-center justify-end my-5 gap-4 w-11/12 max-w-5xl">
+        <div className="flex flex-wrap items-center justify-end mb-10 gap-4 w-11/12 max-w-5xl">
           {techs.getTechnologiesByName(tech).map((t, i) => (
-            <div key={i} className={`relative h-10 w-10`}>
+            <div key={i} className={`relative h-7 w-7 sm:h-9 sm:w-9`}>
               <Image fill src={t.icon} alt={t.name} />
             </div>
           ))}
