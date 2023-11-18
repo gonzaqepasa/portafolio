@@ -1,12 +1,10 @@
 import allProjects from "@/Projects/allProjects";
-import { ProjectTypes } from "@/Projects/class/Projects";
 import ProjectDescription from "@/components/ProjectView/ProjectDescription";
 import ProjectTech from "@/components/ProjectView/ProjectTech";
 import ProjectTitle from "@/components/ProjectView/ProjectTitle";
 import ProjectUrls from "@/components/ProjectView/ProjectUrls";
 import ProjectImages from "@/components/ProjectView/ProjectsImages";
 import StateOfProjectText from "@/components/globals/StateOfProjectText";
-import InProductiontext from "@/components/globals/StateOfProjectText";
 import { Button } from "@nextui-org/react";
 import Link from "next/link";
 
@@ -15,6 +13,7 @@ interface Props {
     name: string;
   };
 }
+
 
 const PorjectsPage: React.FC<Props> = ({ params }) => {
   const project = allProjects.find(
