@@ -27,7 +27,7 @@ const StateOfProjectText: React.FC<Props> = ({ state }) => {
   return (
     <>
       {state && (
-        <div className="flex items-center ">
+        <div className="flex items-center whitespace-nowrap ">
           <p className="text-xs">{renderIcon(state.val)}</p>
           <i className={`${returnColor(state.color)} text-xs `}>{state.val}</i>
         </div>
