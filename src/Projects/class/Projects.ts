@@ -1,4 +1,7 @@
 import { typesTech } from "@/Techs/class/Tech";
+import { StaticImport } from "next/dist/shared/lib/get-img-props";
+import { returnState, typesProjectState } from "./state/state";
+import { FcApproval, FcServices, FcHighPriority } from "react-icons/fc";
 
 export type typesMainColor =
   | "cyan"
@@ -17,9 +20,9 @@ export interface ProjectTypes {
   url?: string;
   urlGithub?: string;
   tech?: typesTech["name"][];
-  production?: boolean;
+  state: typesProjectState["val"];
 }
-
+//////// AQUI COMIENZA LA CLASE ////////
 class Project {
   name: string;
   extendedDescription: string;
@@ -29,7 +32,7 @@ class Project {
   url?: string;
   urlGithub?: string;
   tech?: typesTech["name"][];
-  production?: boolean;
+  private state: typesProjectState["val"];
 
   constructor({
     name,
@@ -40,7 +43,7 @@ class Project {
     urlGithub,
     tech,
     extendedDescription,
-    production,
+    state,
   }: ProjectTypes) {
     this.name = name;
     this.description = description;
@@ -50,7 +53,11 @@ class Project {
     this.url = url;
     this.urlGithub = urlGithub;
     this.tech = tech;
-    this.production = production;
+    this.state = state;
+  }
+
+  public getState() {
+    return returnState(this.state);
   }
 }
 

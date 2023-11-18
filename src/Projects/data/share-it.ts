@@ -6,6 +6,7 @@ const data: ProjectTypes = {
     "Esta va a ser la descripcion general de todo el proyecto si o si requerida",
   description: "Red social realizada en Henry para rendir final",
   colorMain: "yellow",
+  state: "Versión Beta",
 };
 
 const share_it = new Project(data);
