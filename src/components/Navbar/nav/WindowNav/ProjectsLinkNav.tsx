@@ -1,5 +1,5 @@
 import Project, { typesMainColor } from "@/Projects/class/Projects";
-import InProductiontext from "@/components/globals/InProductionText";
+import StateOfProjectText from "@/components/globals/StateOfProjectText";
 import Link from "next/link";
 
 const returnColor = (str: typesMainColor): string => {
@@ -29,7 +29,7 @@ const ProjectsLinkNav: React.FC<Props> = ({ p }) => {
     >
       <p className="flex items-center whitespace-nowrap gap-2">
         {p.name}
-        {p.production && <InProductiontext />}
+        <StateOfProjectText state={p.getState()} />
       </p>
       {p.description && (
         <i className="text-xs  text-neutral-400">{p.description}</i>
