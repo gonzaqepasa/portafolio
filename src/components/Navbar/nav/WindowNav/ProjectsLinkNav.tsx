@@ -1,14 +1,13 @@
 import Project, { typesMainColor } from "@/Projects/class/Projects";
+import StateOfProjectText from "@/components/globals/StateOfProjectText";
 import Link from "next/link";
-import { FcApproval } from "react-icons/fc";
-import { Tooltip } from "@nextui-org/react";
 
 const returnColor = (str: typesMainColor): string => {
   const colorVariants: Record<typesMainColor, string> = {
-    cyan: "text-cyan-400 before:bg-cyan-400 ",
-    red: "text-red-500 before:bg-red-500 ",
-    yellow: "text-yellow-400 before:bg-yellow-400 ",
-    green: "text-yellow-600 before:bg-yellow-500 ",
+    cyan: "before:bg-cyan-400 ",
+    red: " before:bg-red-500 ",
+    yellow: " before:bg-yellow-400 ",
+    green: " before:bg-yellow-500 ",
     orange: "text-yellow-600 before:bg-yellow-500 ",
     purple: "text-yellow-600 before:bg-yellow-500 ",
     violet: "text-yellow-600 before:bg-yellow-500 ",
@@ -23,19 +22,14 @@ interface Props {
 const ProjectsLinkNav: React.FC<Props> = ({ p }) => {
   return (
     <Link
-      className={`flex flex-col  text-lg sm:hover:bg-neutral-900 relative w-full p-1 rounded transition-colors ${returnColor(
+      className={`flex flex-col  text-lg sm:hover:bg-neutral-900 relative w-full p-1 rounded transition-colors hover:text-neutral-200 ${returnColor(
         p.colorMain
       )} link-hover-effect  `}
       href={`/projects/${p.name}`}
     >
       <p className="flex items-center whitespace-nowrap gap-2">
         {p.name}
-        {p.production && (
-          <i className="flex   text-xs text-green-300">
-            <FcApproval className="text-base" />
-            En producción
-          </i>
-        )}
+        <StateOfProjectText state={p.getState()} />
       </p>
       {p.description && (
         <i className="text-xs  text-neutral-400">{p.description}</i>

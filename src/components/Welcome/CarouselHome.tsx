@@ -3,36 +3,12 @@ import * as React from "react";
 import Slider, { Settings } from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
-import cssSvg from "@/utils/images/tecnologies/css-3.svg";
-import expressSvg from "@/utils/images/tecnologies/express.svg";
-import firebaseSvg from "@/utils/images/tecnologies/firebase.svg";
-import gitSvg from "@/utils/images/tecnologies/git.svg";
-import htmlSvg from "@/utils/images/tecnologies/html-5.svg";
-import javascriptSvg from "@/utils/images/tecnologies/javascript.svg";
-import mongoSvg from "@/utils/images/tecnologies/mongodb.svg";
-import nextSvg from "@/utils/images/tecnologies/nextjs.svg";
-import nodeSvg from "@/utils/images/tecnologies/nodejs.svg";
-import postgresSvg from "@/utils/images/tecnologies/postgresql.svg";
-import reactSvg from "@/utils/images/tecnologies/react.svg";
 import Image from "next/image";
-
-const technologies = [
-  cssSvg,
-  expressSvg,
-  firebaseSvg,
-  gitSvg,
-  htmlSvg,
-  javascriptSvg,
-  mongoSvg,
-  nextSvg,
-  nodeSvg,
-  postgresSvg,
-  reactSvg,
-];
+import Tech from "@/Techs/class/Tech";
 
 function CarouselHome() {
   const [isCarouselLoaded, setIsCarouselLoaded] = React.useState(false);
+  const tech = new Tech();
   const handleCarouselLoad = () => {
     setIsCarouselLoaded(true);
   };
@@ -79,9 +55,9 @@ function CarouselHome() {
     <div className="flex items-center w-full h-32 my-5">
       <div className={`w-full ${isCarouselLoaded ? "flex" : "hidden"}`}>
         <Slider className={`w-full  fadeIn-1  `} {...settings}>
-          {technologies.map((e, i) => (
+          {tech.getAllTecnologies().map((e, i) => (
             <div className="relative h-16 sm:h-14 w-10 " key={i}>
-              <Image fill src={e} alt="error" />
+              <Image fill src={e.icon} alt="error" />
             </div>
           ))}
         </Slider>

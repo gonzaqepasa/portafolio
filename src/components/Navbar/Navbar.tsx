@@ -8,20 +8,6 @@ import WindowNav from "./nav/WindowNav/WindowNav";
 
 function NavbarMain() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [scrollTop, setScrollTop] = useState(false);
-  useEffect(() => {
-    const handleScroll = () => {
-      window.scrollY > 0 ? setScrollTop(true) : setScrollTop(false);
-    };
-
-    // Agregar el event listener al montar el componente
-    window.addEventListener("scroll", handleScroll);
-
-    // Limpiar el event listener al desmontar el componente
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
 
   return (
     <>
@@ -30,13 +16,13 @@ function NavbarMain() {
         isBlurred
         isMenuOpen={isMenuOpen}
         onMenuOpenChange={setIsMenuOpen}
-        className="bg-neutral-900/50 "
+        className="bg-neutral-900/5 "
       >
         <SocialMediaNav justify="start" mobile={false} />
         <HamburguerNav isMenuOpen={isMenuOpen} />
         <WindowNav />
         <SocialMediaNav justify="end" mobile={true} />
-        <MobileNav />
+        <MobileNav setIsMenuOpen={setIsMenuOpen} />
       </Navbar>
     </>
   );
