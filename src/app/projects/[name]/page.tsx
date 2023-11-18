@@ -34,7 +34,7 @@ const PorjectsPage: React.FC<Props> = ({ params }) => {
           <ProjectDescription description={project.extendedDescription} />
           <ProjectUrls url={project.url} urlGithub={project.urlGithub} />
           <ProjectTech tech={project.tech} />
-          <ProjectImages />
+          <ProjectImages image={project.images} />
         </>
       ) : (
         <div className="text-center">
