@@ -9,7 +9,7 @@ const data: ProjectTypes = {
   url: "https://moviedick.vercel.app/browse",
   urlGithub: "https://www.github.com/gonzaqepasa/moviedick",
   tech: ["react", "nextjs", "node"],
-  state: "En Pruebas",
+  state: "Versión Beta",
 };
 
 const moviedick = new Project(data);

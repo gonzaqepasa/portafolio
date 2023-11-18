@@ -1,6 +1,7 @@
 import { typesProjectState } from "@/Projects/class/state/state";
 import Image from "next/image";
-import { FcApproval } from "react-icons/fc";
+import { FcApproval, FcBarChart, FcServices, FcVlc } from "react-icons/fc";
+
 interface Props {
   state: typesProjectState;
 }
@@ -15,13 +16,21 @@ const returnColor = (str: typesProjectState["color"]): string => {
 };
 const StateOfProjectText: React.FC<Props> = ({ state }) => {
   console.log(state);
+
+  function renderIcon(icon: typesProjectState["val"]) {
+    if (icon === "En Producción") return <FcApproval />;
+    if (icon === "En Construcción") return <FcVlc />;
+    if (icon === "En Mantenimiento") return <FcServices />;
+    if (icon === "Versión Beta") return <FcBarChart />;
+  }
+
   return (
     <>
       {state && (
-        <i className={`flex ${returnColor(state.color)} text-xs `}>
-          {/* <Image src={state.icon} alt={state.val} /> */}
-          {state.val}
-        </i>
+        <div className="flex items-center ">
+          <p className="text-xs">{renderIcon(state.val)}</p>
+          <i className={`${returnColor(state.color)} text-xs `}>{state.val}</i>
+        </div>
       )}
     </>
   );
