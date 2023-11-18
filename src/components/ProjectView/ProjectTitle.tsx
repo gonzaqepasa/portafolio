@@ -3,8 +3,12 @@ interface Props {
 }
 const ProjectTitle: React.FC<Props> = ({ name }) => {
   return (
-    <div>
-      <h2 className={`text-2xl`}>{name}</h2>
+    <div className="">
+      <h2
+        className={`text-4xl  bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-transparent bg-clip-text`}
+      >
+        {name}
+      </h2>
     </div>
   );
 };

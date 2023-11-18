@@ -23,7 +23,7 @@ const PorjectsPage: React.FC<Props> = ({ params }) => {
 
   return (
     <main
-      className={`min-h-[calc(100vh-20vh)] w-full flex flex-col items-center ${
+      className={`min-h-[calc(100vh-20vh)] py-10 w-full flex flex-col items-center ${
         !project && "justify-center"
       } `}
     >

@@ -6,11 +6,11 @@ interface Props {
 }
 const ProjectUrls: React.FC<Props> = ({ url, urlGithub }) => {
   return (
-    <div>
+    <>
       {url && (
-        <div>
+        <div className="w-11/12 max-w-5xl  whitespace-nowrap">
           <a
-            className="flex items-center gap-1 text-blue-400 hover:text-blue-600 transition-colors"
+            className="flex items-center gap-1  text-blue-400 hover:text-blue-600 transition-colors"
             href={url}
             target="_blank"
           >
@@ -20,9 +20,9 @@ const ProjectUrls: React.FC<Props> = ({ url, urlGithub }) => {
         </div>
       )}
       {urlGithub && (
-        <div>
+        <div className="w-11/12 max-w-5xl whitespace-nowrap ">
           <a
-            className="flex items-center gap-1 text-blue-400 hover:text-blue-600 transition-colors"
+            className="flex items-center gap-1  text-blue-400 hover:text-blue-600 transition-colors"
             href={urlGithub}
             target="_blank"
           >
@@ -31,7 +31,7 @@ const ProjectUrls: React.FC<Props> = ({ url, urlGithub }) => {
           </a>
         </div>
       )}
-    </div>
+    </>
   );
 };
 

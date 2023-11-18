@@ -24,18 +24,22 @@ const ProjectImages: React.FC<Props> = () => {
     setIsViewerOpen(false);
   };
   return (
-    <div className="bg-red-600">
-      <div className={`flex items-center flex-wrap`}>
+    <div className="  w-11/12">
+      <div className={`flex items-center gap-8 justify-evenly flex-wrap`}>
         {images.map((src, index) => (
-          <Image
-            src={src}
-            onClick={() => openImageViewer(index)}
-            width={250}
-            height={250}
+          <div
+            className="border-2 cursor-pointer border-neutral-500 rounded-lg transition hover:shadow-neutral-600 hover:shadow-md  hover:scale-105"
             key={index}
-            style={{ margin: "2px" }}
-            alt=""
-          />
+          >
+            <Image
+              src={src}
+              onClick={() => openImageViewer(index)}
+              width={250}
+              height={250}
+              style={{ margin: "2px" }}
+              alt=""
+            />
+          </div>
         ))}
       </div>
 

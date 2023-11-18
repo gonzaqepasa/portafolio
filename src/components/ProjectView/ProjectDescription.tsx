@@ -3,8 +3,8 @@ interface Props {
 }
 const ProjectDescription: React.FC<Props> = ({ description }) => {
   return (
-    <div>
-      <p className={``}>{description}</p>
+    <div className={`my-4 max-w-3xl px-2 text-center`}>
+      <i className={`font-light`}>{description}</i>
     </div>
   );
 };
