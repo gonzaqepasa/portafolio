@@ -8,7 +8,9 @@ const Wave: React.FC<Props> = ({ fade }) => {
     <div
       className={` h-28 ${fade && "fadeIn-1"} w-full relative overflow-hidden`}
     >
-      <div className="wave "></div>
+      <div className="wave ">
+        
+      </div>
     </div>
   );
 };

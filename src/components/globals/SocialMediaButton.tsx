@@ -7,10 +7,15 @@ const socialMedia = [
   { img: linkedinSvg, url: "https://www.linkedin.com/in/gonzaqepasa/" },
   { img: githubSvg, url: "https://github.com/gonzaqepasa/" },
 ];
-
-const SocialMediaButton = () => {
+interface Props {
+  background?: boolean;
+  size?: number;
+}
+const SocialMediaButton: React.FC<Props> = ({ background, size }) => {
   return (
-    <div className="flex gap-3">
+    <div
+      className={`flex  p-2 rounded-md gap-3 ${background && "bg-neutral-400"}`}
+    >
       {socialMedia.map((item, i) => (
         <a
           className={`hover:scale-110 transition-transform`}
@@ -18,7 +23,7 @@ const SocialMediaButton = () => {
           target="_blank"
           href={item.url}
         >
-          <Image height={20} src={item.img} alt="Err" />
+          <Image height={size ? size : 20} src={item.img} alt="Err" />
         </a>
       ))}
     </div>
