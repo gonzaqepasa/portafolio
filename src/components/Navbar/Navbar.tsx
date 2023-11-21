@@ -16,7 +16,8 @@ function NavbarMain() {
         isBlurred
         isMenuOpen={isMenuOpen}
         onMenuOpenChange={setIsMenuOpen}
-        className="bg-neutral-900/5 "
+        className="bg-transparent "
+        height={"3rem"}
       >
         <SocialMediaNav justify="start" mobile={false} />
         <HamburguerNav isMenuOpen={isMenuOpen} />

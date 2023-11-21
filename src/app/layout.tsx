@@ -5,6 +5,7 @@ import "@/styles/fade.css";
 import "@/styles/scrollbar.css";
 import NavbarMain from "@/components/Navbar/Navbar";
 import ico from "./ico.png";
+import FooterMain from "@/components/Footer/Footer";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -44,6 +45,7 @@ export default function RootLayout({
       >
         <NavbarMain />
         {children}
+        <FooterMain/>
       </body>
     </html>
   );

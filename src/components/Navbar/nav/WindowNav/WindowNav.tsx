@@ -48,7 +48,7 @@ const WindowNav: React.FC<Props> = () => {
 
           <DropdownMenu
             aria-label="Navigation window "
-            className="border-2  w-80 border-neutral-600 rounded-lg  bg-neutral-800"
+            className="border-2  w-96 border-neutral-600 rounded-lg  bg-neutral-800"
             variant="light"
           >
             {allProjects.map((p, i) => (

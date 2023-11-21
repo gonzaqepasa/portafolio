@@ -5,15 +5,14 @@ import ProjectTitle from "@/components/ProjectView/ProjectTitle";
 import ProjectUrls from "@/components/ProjectView/ProjectUrls";
 import ProjectImages from "@/components/ProjectView/ProjectsImages";
 import StateOfProjectText from "@/components/globals/StateOfProjectText";
-import { Button } from "@nextui-org/react";
-import Link from "next/link";
+
+import NoProject from "./no-project";
 
 interface Props {
   params: {
     name: string;
   };
 }
-
 
 const PorjectsPage: React.FC<Props> = ({ params }) => {
   const project = allProjects.find(
@@ -22,9 +21,7 @@ const PorjectsPage: React.FC<Props> = ({ params }) => {
 
   return (
     <main
-      className={`min-h-[calc(100vh-20vh)] py-10 w-full flex flex-col items-center ${
-        !project && "justify-center"
-      } `}
+      className={`min-h-[calc(100vh-20vh)] py-10 w-full flex flex-col items-center `}
     >
       {project ? (
         <>
@@ -36,13 +33,7 @@ const PorjectsPage: React.FC<Props> = ({ params }) => {
           <ProjectImages image={project.images} />
         </>
       ) : (
-        <div className="text-center">
-          <h3> No existe un proyecto con este nombre :C</h3>
-          <p>Puede que te hayas equivocado</p>
-          <Button className="m-3" color="default" variant="shadow">
-            <Link href={"/"}>Volver al Home</Link>
-          </Button>
-        </div>
+        <NoProject />
       )}
     </main>
   );

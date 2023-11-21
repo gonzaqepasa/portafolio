@@ -45,18 +45,18 @@ function CarouselHome() {
       {
         breakpoint: 640,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
           speed: 1500,
         },
       },
     ],
   };
   return (
-    <div className="flex items-center w-full h-32 my-5">
+    <div className="flex items-center w-full h-32 lg:my-5">
       <div className={`w-full ${isCarouselLoaded ? "flex" : "hidden"}`}>
         <Slider className={`w-full  fadeIn-1  `} {...settings}>
           {tech.getAllTecnologies().map((e, i) => (
-            <div className="relative h-16 sm:h-14 w-10 " key={i}>
+            <div className="relative h-10 sm:h-14 w-10 " key={i}>
               <Image fill src={e.icon} alt="error" />
             </div>
           ))}
