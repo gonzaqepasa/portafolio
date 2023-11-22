@@ -23,7 +23,7 @@ const ProjectImages: React.FC<Props> = ({ image }) => {
   return (
     <>
       {image && (
-        <div className="  w-11/12">
+        <div className=" w-11/12 max-w-5xl">
           <div className={`flex items-center gap-8 justify-evenly flex-wrap`}>
             {image.map((src, index) => (
               <div
