@@ -6,8 +6,8 @@ const FooterMain = () => {
   return (
     <>
       <Wave />
-      <footer className="flex min-h-[50vh] flex-col text-neutral-900  pb-6  items-center justify-evenly relative bg-white">
-        <div className=" flex py-2  flex-col text-base">
+      <footer className="flex min-h-[50vh] flex-col lg:grid lg:grid-cols-2 text-neutral-900  pb-6  items-center justify-evenly relative bg-white">
+        <div className=" flex py-2 lg:items-center flex-col text-base">
           <p className="">Contacto:</p>
 
           <a
@@ -30,7 +30,7 @@ const FooterMain = () => {
             +54 11-53741713
           </a>
         </div>
-        <div className=" lg:w-11/12 my-5 flex justify-end">
+        <div className=" lg:w-11/12 my-5 flex lg:justify-center justify-end">
           <SocialMediaButton background />
         </div>
         <div className="absolute bottom-0">
